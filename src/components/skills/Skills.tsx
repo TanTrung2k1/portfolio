@@ -28,7 +28,7 @@ const Skills = () => {
           <div className="left flex-1 w-full">
             <p
               data-aos="zoom-in"
-              className="text-gray-700 font-medium w-[100%] text-center mb-10"
+              className="text-gray-700 font-medium w-[100%] text-center mb-10 lg:mt-10"
             >
               Back-End
             </p>
@@ -41,7 +41,7 @@ const Skills = () => {
                 skill={"ASP.NET"}
               />
               <SkillBox
-                logo={<SiSwagger />}
+                logo={<SiSwagger color="green" />}
                 black={"white"}
                 white={"black"}
                 skill={"Restful API"}
@@ -54,13 +54,13 @@ const Skills = () => {
               />
 
               <SkillBox
-                logo={<SiMicrosoftsqlserver />}
+                logo={<SiMicrosoftsqlserver color="red" />}
                 black={"black"}
                 white={"white"}
                 skill={"SQL Server"}
               />
               <SkillBox
-                logo={<VscAzure />}
+                logo={<VscAzure color="blue" />}
                 black={"black"}
                 white={"white"}
                 skill={"Azure"}
@@ -78,37 +78,109 @@ const Skills = () => {
             </p>
             <div className="flex flex-wrap gap-10 justify-center">
               <SkillBox
-                logo={<IoLogoHtml5 />}
+                logo={<IoLogoHtml5 color="red" />}
                 black={"white"}
                 white={"black"}
                 skill={"HTML"}
               />
               <SkillBox
-                logo={<IoLogoCss3 />}
+                logo={<IoLogoCss3 color="blue" />}
                 black={"white"}
                 white={"black"}
                 skill={"CSS"}
               />
               <SkillBox
-                logo={<SiJavascript />}
+                logo={<SiJavascript color="yellow" />}
                 black={"white"}
                 white={"black"}
                 skill={"Javascript"}
               />
               <SkillBox
-                logo={<SiTailwindcss />}
+                logo={<SiTailwindcss color="blue" />}
                 black={"black"}
                 white={"white"}
                 skill={"Tailwind CSS"}
               />
               <SkillBox
-                logo={<SiReact />}
+                logo={<SiReact color="#7ED5E8" />}
                 black={"black"}
                 white={"white"}
                 skill={"React"}
               />
             </div>
           </div>
+        </div>
+
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1200"
+          className=" container m-auto flex flex-wrap items-center justify-center mt-8 gap-8 md:gap-5 cursor-pointer"
+        >
+          <img
+            title="Next JS"
+            className="w-[40px] h-[40px] md:w-[35px] md:h-[35px] transition-transform hover:scale-150 cursor-pointer"
+            src="https://img.icons8.com/nolan/64/nextjs.png"
+            alt="nextjs"
+          />
+
+          <img
+            title="Spring Boot"
+            className="w-[40px] h-[40px] md:w-[35px] md:h-[35px] transition-transform hover:scale-150 cursor-pointer"
+            src="https://img.icons8.com/color/48/spring-logo.png"
+            alt="spring-logo"
+          />
+          <img
+            title="Typescript"
+            className="w-[40px] h-[40px] md:w-[35px] md:h-[35px] transition-transform hover:scale-150 cursor-pointer"
+            src="https://img.icons8.com/color/48/typescript.png"
+            alt="typescript"
+          />
+          <img
+            title="Sass"
+            className="w-[40px] h-[40px] md:w-[35px] md:h-[35px] transition-transform hover:scale-150 cursor-pointer"
+            src="https://img.icons8.com/color/48/null/sass.png"
+          />
+
+          <img
+            title="Git"
+            className="w-[40px] h-[40px] md:w-[35px] md:h-[35px] transition-transform hover:scale-150 cursor-pointer"
+            src="https://img.icons8.com/color/48/git.png"
+          />
+
+          <img
+            title="Vite"
+            className="w-[40px] h-[40px] md:w-[35px] md:h-[35px] transition-transform hover:scale-150 cursor-pointer"
+            src="https://img.icons8.com/fluency/48/vite.png"
+            alt="vite"
+          />
+          <img
+            title="Bootstrap"
+            className="w-[40px] h-[40px] md:w-[35px] md:h-[35px] transition-transform hover:scale-150 cursor-pointer"
+            src="https://img.icons8.com/color-glass/48/bootstrap.png"
+            alt="bootstrap"
+          />
+          <img
+            title="Tailwind css"
+            className="w-[40px] h-[40px] md:w-[35px] md:h-[35px] transition-transform hover:scale-150 cursor-pointer"
+            src="https://img.icons8.com/fluency/48/tailwind_css.png"
+            alt="tailwind_css"
+          />
+          <img
+            title="Javascript"
+            className="w-[40px] h-[40px] md:w-[35px] md:h-[35px] transition-transform hover:scale-150 cursor-pointer"
+            src="https://img.icons8.com/color/48/null/javascript--v1.png"
+          />
+          {/* <img
+            title="Node JS"
+            className="w-[40px] h-[40px] md:w-[35px] md:h-[35px]"
+            src="https://img.icons8.com/color/48/null/nodejs.png"
+          /> */}
+          <img
+            title="SQL Server"
+            className="w-[40px] h-[40px] md:w-[35px] md:h-[35px] transition-transform hover:scale-150 cursor-pointer"
+            src="https://img.icons8.com/color/48/microsoft-sql-server.png"
+            alt="microsoft-sql-server"
+          />
         </div>
       </div>
     </div>

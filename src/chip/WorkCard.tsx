@@ -1,6 +1,5 @@
 import styled from "styled-components";
-
-import { RxExternalLink } from "react-icons/rx";
+import { SiSwagger } from "react-icons/si";
 import { AiOutlineGithub } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import worksData, { Work } from "../data/worksData";
@@ -31,7 +30,7 @@ const WorkCard = () => {
               <div
                 className={`popup w-full h-[280px] shadow-xl rounded-md overflow-hidden sm:h-[260px] sm:w-[92%] p-4`}
               >
-                <p className=" text-gray-900 text-base leading-[1.4] text-justify w-[90%]">
+                <p className=" text-gray-900 text-base leading-[1.4] text-left w-[90%]">
                   {data.desc}
                 </p>
                 <div className=" flex items-center justify-center gap-4">
@@ -39,9 +38,10 @@ const WorkCard = () => {
                     <Link
                       to={data.link}
                       target="_blank"
-                      className="  mt-3 rounded-md shadow-md p-1 px-2 flex gap-2 items-center justify-center font-medium"
+                      rel="noopener noreferrer"
+                      className="mt-3 rounded-md shadow-md p-1 px-2 flex gap-2 items-center justify-center font-medium hover:bg-green-200"
                     >
-                      <RxExternalLink className=" text-black bg-white rounded-full border  w-[35px] h-[35px] p-2" />
+                      <SiSwagger className=" text-black bg-green-600 rounded-full border  w-[35px] h-[35px] p-2" />
                       <p className=" text-black">Demo</p>
                     </Link>
                   )}
@@ -50,7 +50,8 @@ const WorkCard = () => {
                     <Link
                       to={data.github}
                       target="_blank"
-                      className="  mt-3 rounded-md shadow-md p-1 px-2 flex gap-2 items-center justify-center font-medium"
+                      rel="noopener noreferrer"
+                      className="  mt-3 rounded-md shadow-md p-1 px-2 flex gap-2 items-center justify-center font-medium hover:bg-slate-200"
                     >
                       <AiOutlineGithub className="  text-black bg-white rounded-full border  w-[35px] h-[35px] p-2" />
                       <p className=" text-black">Code</p>

@@ -1,5 +1,5 @@
 import { Suspense, useEffect, useState } from "react";
-import { BarLoader } from "react-spinners";
+import { PropagateLoader } from "react-spinners";
 import { Home } from "./pages/Home";
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
-    }, 1000);
+    }, 1100);
     return () => clearTimeout(timer);
   }, []);
 
@@ -16,13 +16,13 @@ function App() {
     <Suspense
       fallback={
         <div className="h-screen w-full flex items-center justify-center">
-          <BarLoader color="#f6c400" height={4} />
+          <PropagateLoader color="#a0d468" size={25} />
         </div>
       }
     >
       {loading ? (
         <div className="h-screen w-full flex items-center justify-center">
-          <BarLoader color="#f6c400" height={4} />
+          <PropagateLoader color="#a0d468" size={25} />
         </div>
       ) : (
         <Home />

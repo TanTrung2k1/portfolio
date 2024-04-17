@@ -55,3 +55,10 @@ html {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+@layer utilities {
+  .shadow-yellow {
+    box-shadow: 0 0 40px rgba(255, 227, 72, 0.693); /* Màu vàng phù hợp */
+  }
+}
+

@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { HiMenu } from "react-icons/hi";
 import { RxCross2 } from "react-icons/rx";
@@ -15,15 +15,15 @@ const navItems: navItem[] = [
   },
   {
     id: 1,
-    name: "skills",
+    name: "resume",
   },
   {
     id: 2,
-    name: "works",
+    name: "skills",
   },
   {
     id: 3,
-    name: "resume",
+    name: "works",
   },
   {
     id: 4,
@@ -34,6 +34,23 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState("");
   const [scrollPosition, setScrollPosition] = useState(0);
+  const toggleRef = useRef<HTMLUListElement>(null);
+
+  useEffect(() => {
+    const handleOpenCloseToggle = (event: MouseEvent) => {
+      if (
+        toggleRef.current &&
+        !toggleRef.current.contains(event.target as Node) &&
+        isOpen
+      ) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleOpenCloseToggle);
+    return () => {
+      document.removeEventListener("mousedown", handleOpenCloseToggle);
+    };
+  }, [isOpen]);
 
   const toggleNav = (name: string) => {
     setIsOpen(!isOpen);
@@ -80,14 +97,15 @@ const Navbar = () => {
           </button>
 
           <ul
-            className={`flex items-center space-x-11 ${
+            ref={toggleRef}
+            className={`flex items-center justify-center space-x-11 ${
               !isOpen ? "md:flex" : "md:right-[0%]"
-            } md:flex-col md:absolute m-auto md:top-0 md:right-[-100%] md:w-[78%] md:h-screen md:bg-white `}
+            } md:flex-col md:absolute m-auto md:top-0 md:right-[-100%] md:w-[70%] md:h-[40vh] md:bg-slate-100 md:rounded-2xl md:mx-auto`}
           >
             {/* Use a button tag for better accessibility */}
             <button
               onClick={() => toggleNav("")}
-              className={`text-3xl hidden md:block relative right-0 top-4 container mx-auto`}
+              className={`text-3xl hidden md:block relative top-8 container mx-auto`}
             >
               <RxCross2 size={25} />
             </button>
@@ -107,12 +125,12 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
-            <a
-              href=""
-              className="bg-black text-[1rem] text-white px-8 py-2 rounded-lg font-bold hover:text-yellow-400 md:m-5 md:block md:mx-auto md:w-fit lg:px-3"
+            {/* <a
+              href="mailto:nguyentantrung1801@gmail.com"
+              className="uppercase bg-black text-[1rem] text-white px-8 py-2 rounded-lg font-bold hover:text-yellow-400 md:m-5 md:block md:mx-auto md:w-fit lg:px-3"
             >
-              HIRE ME
-            </a>
+              Work with Me
+            </a> */}
           </ul>
         </div>
       </nav>

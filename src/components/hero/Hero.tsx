@@ -12,7 +12,7 @@ import circle from "../../assets/circle.png";
 
 const Hero = () => {
   return (
-    <div id="home" className={`bg-gradient-to-r from-green-200 to-yellow-200`}>
+    <div id="home" className={`bg-gradient-to-r from-teal-400 to-yellow-200`}>
       <div className="container mx-auto pt-5 h-[750px] md:h-[100vh] md:flex-col-reverse sm:h-[780px] flex sm:flex-col-reverse sm:pt-0">
         <div className="left mt-4 md:mt-0 flex-1 flex flex-col justify-center gap-5 w-1/2 md:w-full md:py-2 sm:py-0">
           <div className="info w-fit flex flex-col items-start justify-center gap-3 sm:gap-2">
@@ -20,7 +20,7 @@ const Hero = () => {
               data-aos="fade-up"
               className="text-5xl font-bold sm:text-[2rem]"
             >
-              Hello, I'm Tấn Trung
+              Hello, I'm Tấn Trung.
             </h2>
             <TypeAnimation
               data-aos="fade-up"
@@ -42,17 +42,20 @@ const Hero = () => {
 
             <p
               data-aos="fade-down"
-              className="text-[1.1rem] font-medium w-3/4 md:w-full text-gray-500 sm:text-[.95rem]"
+              className="text-[1.1rem] font-medium w-3/4 md:w-full text-gray-700 sm:text-[.95rem]"
             >
-              Lorem ipsum dolor sit amet consectetur
+              Graduated from <strong>FPT University HCM</strong> with a Bachelor
+              of <strong>Software Engineering</strong>, I have a strong
+              foundation in software development, web design, and project
+              management.
             </p>
           </div>
           <div data-aos="fade-up" className="buttons flex gap-5">
             <a
-              href=""
+              href="mailto:nguyentantrung1801@gmail.com"
               className="bg-black text-[1rem] text-white px-10 py-2 sm:px-8 rounded-lg font-bold hover:text-yellow-500"
             >
-              Hire Me
+              Work with Me.
             </a>
             <a
               href={resumePDF}
@@ -71,28 +74,32 @@ const Hero = () => {
               className="flex gap-5"
             >
               <li>
-                <a href="">
-                  <AiFillGithub className="h-[1.8rem] w-[1.8rem] text-xl hover:scale-125" />
+                <a
+                  href="https://github.com/TanTrungg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <AiFillGithub className="h-[2rem] w-[2rem] text-xl hover:scale-125" />
                 </a>
               </li>
               <li>
                 <a href="">
-                  <FaFacebook className="h-[1.8rem] w-[1.8rem] text-xl hover:scale-125" />
+                  <FaFacebook className="h-[2rem] w-[2rem] text-xl hover:scale-125" />
                 </a>
               </li>
               <li>
                 <a href="">
-                  <AiFillInstagram className="h-[1.8rem] w-[1.8rem] text-xl hover:scale-125" />
+                  <AiFillInstagram className="h-[2rem] w-[2rem] text-xl hover:scale-125" />
                 </a>
               </li>
               <li>
                 <a href="">
-                  <FaLinkedinIn className="h-[1.8rem] w-[1.8rem] text-xl hover:scale-125" />
+                  <FaLinkedinIn className="h-[2rem] w-[2rem] text-xl hover:scale-125" />
                 </a>
               </li>
               <li>
                 <a href="">
-                  <AiFillTwitterCircle className="h-[1.8rem] w-[1.8rem] text-xl hover:scale-125" />
+                  <AiFillTwitterCircle className="h-[2rem] w-[2rem] text-xl hover:scale-125" />
                 </a>
               </li>
             </ul>
@@ -128,10 +135,10 @@ const Hero = () => {
           <div className="relative h-[88%] w-fit flex items-center sm:items-end">
             <div
               data-aos="fade-up"
-              className="bg-gradient-to-r from-yellow-300 to-green-300 rounded-full overflow-hidden md:h-[95%] z-10"
+              className="bg-gradient-to-r from-blue-200 to-cyan-200 rounded-full overflow-hidden md:h-[95%] z-10 shadow-yellow hover:scale-110"
             >
               <img
-                className="h-[90%] w-full object-cover md:h-[95%] md:m-auto sm:m-0 rounded-full"
+                className="h-[90%] w-full object-cover md:h-[100%] md:m-auto sm:m-0 rounded-full shadow-md"
                 src={avatar}
                 alt="mine"
               />
