@@ -100,7 +100,7 @@ const Navbar = () => {
             ref={toggleRef}
             className={`flex items-center justify-center space-x-11 ${
               !isOpen ? "md:flex" : "md:right-[0%]"
-            } md:flex-col md:absolute m-auto md:top-0 md:right-[-100%] md:w-[70%] md:h-[50vh] md:bg-slate-100 md:rounded-2xl md:mx-auto`}
+            } md:flex-col md:absolute m-auto md:top-0 md:right-[-100%] md:w-[70%] md:h-[55vh] md:bg-slate-100 md:rounded-2xl md:mx-auto`}
           >
             {/* Use a button tag for better accessibility */}
             <button
