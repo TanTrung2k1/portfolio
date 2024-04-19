@@ -165,11 +165,7 @@ const Skills = () => {
             src="https://img.icons8.com/fluency/48/tailwind_css.png"
             alt="tailwind_css"
           />
-          <img
-            title="Javascript"
-            className="w-[40px] h-[40px] md:w-[35px] md:h-[35px] transition-transform hover:scale-150 cursor-pointer"
-            src="https://img.icons8.com/color/48/null/javascript--v1.png"
-          />
+
           {/* <img
             title="Node JS"
             className="w-[40px] h-[40px] md:w-[35px] md:h-[35px]"
@@ -180,6 +176,12 @@ const Skills = () => {
             className="w-[40px] h-[40px] md:w-[35px] md:h-[35px] transition-transform hover:scale-150 cursor-pointer"
             src="https://img.icons8.com/color/48/microsoft-sql-server.png"
             alt="microsoft-sql-server"
+          />
+          <img
+            title="Redis"
+            className="w-[40px] h-[40px] md:w-[35px] md:h-[35px] transition-transform hover:scale-150 cursor-pointer"
+            src="https://img.icons8.com/fluency/48/redis.png"
+            alt="redis"
           />
         </div>
       </div>

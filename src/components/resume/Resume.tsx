@@ -91,7 +91,7 @@ const Resume = () => {
                   web development technologies such as HTML, CSS, TailwindCSS,
                   JavaScript, TypeScript, React. Additionally, I'm proficient in
                   backend technologies such as C#, ASP.NET Core, Sql Server,
-                  Entity Framwork, Redis, Hangfire and Azure.
+                  Entity Framework, Redis, Hangfire and Azure.
                 </p>
               </div>
             </div>
