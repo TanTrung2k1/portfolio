@@ -16,46 +16,41 @@ const Footer = () => {
           Connect with Me.
         </h2>
         <div className=" flex items-center justify-center gap-8 sm:gap-5">
-          <a
+          <span
             data-aos="fade-up"
             data-aos-duration="1000"
-            href=""
             className="box font-medium text-white   flex items-center justify-center flex-col"
           >
             <FaTelegramPlane className=" text-blue-500 text-2xl hover:scale-125 cursor-pointer" />
-          </a>
-          <a
+          </span>
+          <span
             data-aos="fade-up"
             data-aos-duration="1200"
-            href=""
             className="box font-medium text-white  flex items-center justify-center flex-col"
           >
             <FaFacebook className=" text-blue-500 text-2xl hover:scale-125 cursor-pointer" />
-          </a>
-          <a
+          </span>
+          <span
             data-aos="fade-up"
             data-aos-duration="1400"
-            href=""
             className="box font-medium text-white  flex items-center justify-center flex-col"
           >
             <RiInstagramFill className=" text-blue-500 text-2xl hover:scale-125 cursor-pointer" />
-          </a>
-          <a
+          </span>
+          <span
             data-aos="fade-up"
             data-aos-duration="1400"
-            href=""
             className="box font-medium text-white  flex items-center justify-center flex-col"
           >
             <FaFacebookMessenger className=" text-blue-500 text-2xl hover:scale-125 cursor-pointer" />
-          </a>
-          <a
+          </span>
+          <span
             data-aos="fade-up"
             data-aos-duration="1400"
-            href=""
             className="box font-medium text-white  flex items-center justify-center flex-col"
           >
             <FaTwitter className=" text-blue-500 text-2xl hover:scale-125 cursor-pointer" />
-          </a>
+          </span>
         </div>
 
         <div data-aos="fade-down" className="nav">

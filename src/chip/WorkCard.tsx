@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import worksData, { Work } from "../data/worksData";
 
 const WorkCard = () => {
-  const reversedData: Work[] = [...worksData].reverse();
+  const reversedData: Work[] = [...worksData];
 
   return (
     <>
@@ -30,7 +30,10 @@ const WorkCard = () => {
               <div
                 className={`popup w-full h-[280px] shadow-xl rounded-md overflow-hidden sm:h-[260px] sm:w-[92%] p-4`}
               >
-                <p className=" text-gray-900 text-base leading-[1.4] text-left w-[90%]">
+                <p className=" text-gray-950 text-base font-bold leading-[1.4] text-center mb-2">
+                  {data.role}
+                </p>
+                <p className=" text-gray-950 text-base leading-[1.4] text-left w-[90%]">
                   {data.desc}
                 </p>
                 <div className=" flex items-center justify-center gap-4">
@@ -42,7 +45,7 @@ const WorkCard = () => {
                       className="mt-3 rounded-md shadow-md p-1 px-2 flex gap-2 items-center justify-center font-medium hover:bg-green-200"
                     >
                       <SiSwagger className=" text-black bg-green-600 rounded-full border  w-[35px] h-[35px] p-2" />
-                      <p className=" text-black">Demo</p>
+                      <p className=" text-black">Swagger</p>
                     </Link>
                   )}
                   <br className="w-[2px] bg-white" />

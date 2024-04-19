@@ -47,22 +47,26 @@ const Contact = () => {
       {/* card */}
       <div className="card-wrapper w-[90%] sm:w-[100%] mx-auto mt-5 flex items-center justify-center md:flex-col">
         <div className="left flex-1 items-center sm:w-full">
-          <div className="w-[85%] md:w-[100%] sm:w-[95%] gap-3 flex items-center justify-center flex-col p-5 sm:mb-3 border-2 rounded-lg border-green-400 shadow-[0_0_10px_1px_rgba(255,227,72,0.693)]">
-            <div data-aos="zoom-in">
+          <div className="w-[85%] md:w-[100%] sm:w-[95%] sm:mx-auto gap-3 flex items-center justify-center flex-col p-5 sm:mb-3 border-2 rounded-lg border-green-400 shadow-[0_0_10px_1px_rgba(255,227,72,0.693)]">
+            <div data-aos="fade-down">
               <h1 className="text-2xl font-bold sm:text-lg">
                 Contact me for works
               </h1>
               <div className="text-base font-semibold sm:text-xs mt-10 sm:mt-5 flex flex-col gap-2">
-                <div className="flex items-center justify-start">
-                  <MdMarkEmailRead className="mr-5 hover:scale-125 text-2xl text-orange-500" />
+                <div className="flex items-center justify-start hover:-translate-y-1/4">
+                  <a title="Send me" href="mailto:nguyentantrung1801@gmail.com">
+                    <MdMarkEmailRead className="mr-5 text-2xl text-orange-500" />
+                  </a>
                   <p className="text-gray-600">nguyentantrung1801@gmail.com</p>
                 </div>
-                <div className="flex items-center justify-start">
-                  <MdOutlineContactPhone className="mr-5 hover:scale-125 text-2xl " />
+                <div className="flex items-center justify-start hover:-translate-y-1/4">
+                  <a title="Call me" href="tel:0969920894">
+                    <MdOutlineContactPhone className="mr-5 text-2xl " />
+                  </a>
                   <p className="text-gray-600">0969 920 894</p>
                 </div>
-                <div className="flex items-center justify-start">
-                  <TbLocation className="mr-5 hover:scale-125 text-2xl text-blue-400" />
+                <div className="flex items-center justify-start hover:-translate-y-1/4">
+                  <TbLocation className="mr-5 text-2xl text-blue-400" />
                   <p className="text-gray-600">Thủ Dầu Một - Bình Dương</p>
                 </div>
               </div>
@@ -97,7 +101,7 @@ const Contact = () => {
             data-aos="zoom-in"
             className=" text-yellow-500 font-extrabold text-3xl p-2 rounded-lg shadow-[0_0_10px_1px_rgba(0,0,0,0.1)] "
           >
-            <BsArrowRight className=" md:rotate-90 " />
+            <BsArrowRight className=" md:rotate-90" />
           </button>
         </div>
         <div className="right flex-1">
@@ -113,6 +117,7 @@ const Contact = () => {
               value={email}
               onChange={(event) => setEmail(event?.target.value)}
             />
+
             <input
               className="px-3 shadow-[0_0_16px_0px_rgba(0,0,0,0.1)] p-2 rounded-lg w-full"
               type="text"
@@ -120,6 +125,7 @@ const Contact = () => {
               value={sender}
               onChange={(event) => setSender(event?.target.value)}
             />
+
             <textarea
               className="px-3 shadow-[0_0_16px_0px_rgba(0,0,0,0.1)] p-2 rounded-lg w-full"
               rows={4}
@@ -129,7 +135,7 @@ const Contact = () => {
               onChange={(event) => setMessage(event.target.value)}
             />
             <button
-              className="bg-yellow-500 w-full text-white font-semibold p-2 rounded-lg flex items-center justify-center space-x-4"
+              className="bg-yellow-500 w-full text-white font-semibold p-2 rounded-lg flex items-center justify-center space-x-4 hover:bg-yellow-700"
               type="button"
               onClick={handleSendMail}
             >

@@ -1,6 +1,6 @@
 import { FiDownload } from "react-icons/fi";
 import { TypeAnimation } from "react-type-animation";
-import resumePDF from "../../assets/Nguyen Tan Trung.pdf";
+import resumePDF from "../../assets/NguyenTanTrung_CV.pdf";
 import {
   AiFillTwitterCircle,
   AiFillGithub,
@@ -9,8 +9,33 @@ import {
 import { FaFacebook, FaLinkedinIn, FaPlay } from "react-icons/fa";
 import avatar from "../../assets/avatar.png";
 import circle from "../../assets/circle.png";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
+  const [pdfUrl, setPdfUrl] = useState<string | null>(null);
+
+  const fetchPdf = async () => {
+    try {
+      const response = await fetch(resumePDF);
+      const arrayBuffer = await response.arrayBuffer();
+      const blob = new Blob([arrayBuffer], { type: "application/pdf" });
+      const url = URL.createObjectURL(blob);
+      setPdfUrl(url);
+    } catch (error) {
+      console.error("Error fetching PDF:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchPdf();
+
+    // return () => {
+    //   if (pdfUrl) {
+    //     URL.revokeObjectURL(pdfUrl);
+    //   }
+    // };
+  });
+
   return (
     <div id="home" className={`bg-gradient-to-r from-teal-400 to-yellow-200`}>
       <div className="container mx-auto pt-5 h-[750px] md:h-[100vh] md:flex-col-reverse sm:h-[780px] flex sm:flex-col-reverse sm:pt-0">
@@ -58,9 +83,10 @@ const Hero = () => {
               Work with Me.
             </a>
             <a
-              href={resumePDF}
+              href={pdfUrl || "#"}
               className="flex items-center text-[1rem] bg-white px-7 py-2 sm:px-6 rounded-lg font-bold hover:text-yellow-500"
-              download
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <div className="flex items-center gap-2">
                 Resume <FiDownload />
@@ -135,10 +161,11 @@ const Hero = () => {
           <div className="relative h-[88%] w-fit flex items-center sm:items-end">
             <div
               data-aos="fade-up"
-              className="bg-gradient-to-r from-blue-200 to-cyan-200 rounded-full overflow-hidden md:h-[95%] z-10 shadow-yellow hover:scale-110"
+              className="bg-gradient-to-r from-blue-200 to-cyan-200 rounded-full overflow-hidden md:h-[95%] z-10 shadow-yellow bouncing-circle"
             >
               <img
-                className="h-[90%] w-full object-cover md:h-[100%] md:m-auto sm:m-0 rounded-full shadow-md"
+                loading="lazy"
+                className="h-[90%] w-full object-cover md:h-[100%] md:m-auto sm:m-0 rounded-full shadow-md hover:scale-105"
                 src={avatar}
                 alt="mine"
               />

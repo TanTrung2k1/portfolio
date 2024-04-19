@@ -125,12 +125,12 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
-            {/* <a
+            <a
               href="mailto:nguyentantrung1801@gmail.com"
               className="uppercase bg-black text-[1rem] text-white px-8 py-2 rounded-lg font-bold hover:text-yellow-400 md:m-5 md:block md:mx-auto md:w-fit lg:px-3"
             >
               Work with Me
-            </a> */}
+            </a>
           </ul>
         </div>
       </nav>

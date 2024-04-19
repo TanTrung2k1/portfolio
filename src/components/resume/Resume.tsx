@@ -39,18 +39,19 @@ const Resume = () => {
                   Back-end developer - Intern
                 </h1>
                 <span className="text-[.9rem] font-semibold text-gray-500 sm:text-base">
-                  FPT Software.
+                  FPT Software HCM.
                 </span>
                 <span className="text-[.9rem] font-semibold text-green-500 sm:text-base">
                   September 2022 - January 2023.
                 </span>
                 <p className=" text-[.9rem] text-justify break-words text-gray-500">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Excepturi nihil aut quae obcaecati alias placeat totam aperiam
-                  pariatur quam? Accusantium minima aperiam error obcaecati
-                  autem doloribus deserunt qui, laborum incidunt amet, numquam
-                  eos cum tempora. Debitis, esse quae corporis deserunt officia
-                  quos in a, quaerat vero odio vitae.
+                  In my current internship at <strong>FPT Software HCM</strong>,
+                  I contributed to developing the Back-End infrastructure for
+                  the "Training Management System" project, ensuring system
+                  stability and reliability through efficient implementation of
+                  requested features. Conducted thorough testing to guarantee
+                  error-free source code and provided swift support in debugging
+                  and resolving technical issues.
                 </p>
               </div>
             </div>
@@ -86,12 +87,11 @@ const Resume = () => {
                   Year 2019 - Year 2023
                 </span>
                 <p className=" text-[.9rem] text-justify text-gray-500">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Excepturi nihil aut quae obcaecati alias placeat totam aperiam
-                  pariatur quam? Accusantium minima aperiam error obcaecati
-                  autem doloribus deserunt qui, laborum incidunt amet, numquam
-                  eos cum tempora. Debitis, esse quae corporis deserunt officia
-                  quos in a, quaerat vero odio vitae.
+                  As an undergraduate student, I have a good understanding of
+                  web development technologies such as HTML, CSS, TailwindCSS,
+                  JavaScript, TypeScript, React. Additionally, I'm proficient in
+                  backend technologies such as C#, ASP.NET Core, Sql Server,
+                  Entity Framwork, Redis, Hangfire and Azure.
                 </p>
               </div>
             </div>
