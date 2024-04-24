@@ -31,7 +31,7 @@ const Contact = () => {
     console.log("email", email);
     console.log("sender", sender);
     console.log("message", message);
-    showSuccessAlert("Send success <3");
+    showSuccessAlert("Function is not complete =<");
   };
 
   return (
