@@ -1,6 +1,8 @@
 import { FiDownload } from "react-icons/fi";
 import { TypeAnimation } from "react-type-animation";
-import resumePDF from "../../assets/NguyenTanTrung_CV.pdf";
+import resumeENPDF from "../../assets/NguyenTanTrung_CV_EN.pdf";
+import resumeVNPDF from "../../assets/NguyenTanTrung_CV_VN.pdf";
+
 import {
   AiFillTwitterCircle,
   AiFillGithub,
@@ -12,30 +14,37 @@ import circle from "../../assets/circle.png";
 import { useEffect, useState } from "react";
 
 const Hero = () => {
-  const [pdfUrl, setPdfUrl] = useState<string | null>(null);
-
-  const fetchPdf = async () => {
+  const [pdfEnUrl, setPdfEnUrl] = useState<string | null>(null);
+  const [pdfVnUrl, setPdfVnUrl] = useState<string | null>(null);
+  
+  const fetchEnPdf = async () => {
     try {
-      const response = await fetch(resumePDF);
+      const response = await fetch(resumeENPDF);
       const arrayBuffer = await response.arrayBuffer();
       const blob = new Blob([arrayBuffer], { type: "application/pdf" });
       const url = URL.createObjectURL(blob);
-      setPdfUrl(url);
+      setPdfEnUrl(url);
     } catch (error) {
       console.error("Error fetching PDF:", error);
     }
   };
 
-  useEffect(() => {
-    fetchPdf();
+  const fetchVnPdf = async () => {
+    try {
+      const response = await fetch(resumeVNPDF);
+      const arrayBuffer = await response.arrayBuffer();
+      const blob = new Blob([arrayBuffer], { type: "application/pdf" });
+      const url = URL.createObjectURL(blob);
+      setPdfVnUrl(url);
+    } catch (error) {
+      console.error("Error fetching PDF:", error);
+    }
+  };
 
-    // return () => {
-    //   if (pdfUrl) {
-    //     URL.revokeObjectURL(pdfUrl);
-    //   }
-    // };
-  });
-
+  useEffect(()=>{
+    fetchEnPdf()
+    fetchVnPdf()
+  },[])
   return (
     <div id="home" className={`bg-gradient-to-r from-teal-400 to-yellow-200`}>
       <div className="container mx-auto pt-5 h-[750px] md:h-[100vh] md:flex-col-reverse sm:h-[780px] flex sm:flex-col-reverse sm:pt-0">
@@ -83,13 +92,23 @@ const Hero = () => {
               Work with Me.
             </a>
             <a
-              href={pdfUrl || "#"}
-              className="flex items-center text-[1rem] bg-white px-7 py-2 sm:px-6 rounded-lg font-bold hover:text-yellow-500"
+              href={pdfEnUrl || "#"}
+              className="flex items-center text-[1rem] bg-white px-4 py-2 sm:px-1 text-center rounded-lg font-bold hover:text-yellow-500"
               target="_blank"
               rel="noopener noreferrer"
             >
               <div className="flex items-center gap-2">
-                Resume <FiDownload />
+                Resume-EN <FiDownload />
+              </div>
+            </a>
+            <a
+              href={pdfVnUrl || "#"}
+              className="flex items-center text-[1rem] bg-white px-4 py-2 sm:px-1 text-center rounded-lg font-bold hover:text-yellow-500"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="flex items-center gap-2">
+                Resume-VN <FiDownload />
               </div>
             </a>
           </div>
