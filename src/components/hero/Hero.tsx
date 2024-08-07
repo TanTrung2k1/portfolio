@@ -2,7 +2,7 @@ import { FiDownload } from "react-icons/fi";
 import { TypeAnimation } from "react-type-animation";
 import resumeENPDF from "../../assets/NguyenTanTrung_CV_EN.pdf";
 import resumeVNPDF from "../../assets/NguyenTanTrung_CV_VN.pdf";
-
+import CvModal from "../cvmodel/CvModal";
 import {
   AiFillTwitterCircle,
   AiFillGithub,
@@ -16,7 +16,8 @@ import { useEffect, useState } from "react";
 const Hero = () => {
   const [pdfEnUrl, setPdfEnUrl] = useState<string | null>(null);
   const [pdfVnUrl, setPdfVnUrl] = useState<string | null>(null);
-  
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const fetchEnPdf = async () => {
     try {
       const response = await fetch(resumeENPDF);
@@ -41,10 +42,10 @@ const Hero = () => {
     }
   };
 
-  useEffect(()=>{
-    fetchEnPdf()
-    fetchVnPdf()
-  },[])
+  useEffect(() => {
+    fetchEnPdf();
+    fetchVnPdf();
+  }, []);
   return (
     <div id="home" className={`bg-gradient-to-r from-teal-400 to-yellow-200`}>
       <div className="container mx-auto pt-5 h-[750px] md:h-[100vh] md:flex-col-reverse sm:h-[780px] flex sm:flex-col-reverse sm:pt-0">
@@ -91,7 +92,7 @@ const Hero = () => {
             >
               Work with Me.
             </a>
-            <a
+            {/* <a
               href={pdfEnUrl || "#"}
               className="flex items-center text-[1rem] bg-white px-4 py-2 sm:px-1 text-center rounded-lg font-bold hover:text-yellow-500"
               target="_blank"
@@ -110,7 +111,15 @@ const Hero = () => {
               <div className="flex items-center gap-2">
                 Resume-VN <FiDownload />
               </div>
-            </a>
+            </a> */}
+            <button
+              onClick={() => setIsModalOpen(true)}
+              className="flex items-center text-[1rem] bg-white px-4 py-2 sm:px-1 text-center rounded-lg font-bold hover:text-yellow-500"
+            >
+              <div className="flex items-center gap-2">
+                CV <FiDownload />
+              </div>
+            </button>
           </div>
           <div className="icons flex mt-5">
             <ul
@@ -180,7 +189,7 @@ const Hero = () => {
           <div className="relative h-[88%] w-fit flex items-center sm:items-end">
             <div
               data-aos="fade-up"
-              className="bg-gradient-to-r from-blue-200 to-cyan-200 rounded-full overflow-hidden md:h-[95%] z-10 shadow-yellow bouncing-circle"
+              className="bg-gradient-to-tr from-pink-300 to-teal-300 rounded-full overflow-hidden md:h-[95%] z-10 shadow-yellow bouncing-circle"
             >
               <img
                 loading="lazy"
@@ -207,6 +216,12 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      <CvModal
+        pdfEnUrl={pdfEnUrl}
+        pdfVnUrl={pdfVnUrl}
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </div>
   );
 };
